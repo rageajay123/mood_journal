@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    background: #f0f8ff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 40px;
+}
+
+.moods label {
+    font-size: 2em;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+textarea {
+    width: 80%;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #008cba;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.entry {
+    background: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #008cba;
+}
+
+.emoji {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.time {
+    font-size: 0.9em;
+    color: gray;
+}

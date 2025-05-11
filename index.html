@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>How are you feeling today?</h1>
+    <form method="POST">
+        <div class="moods">
+            <label><input type="radio" name="mood" value="😊" required> 😊</label>
+            <label><input type="radio" name="mood" value="😢"> 😢</label>
+            <label><input type="radio" name="mood" value="😠"> 😠</label>
+            <label><input type="radio" name="mood" value="😴"> 😴</label>
+            <label><input type="radio" name="mood" value="😍"> 😍</label>
+        </div>
+        <textarea name="note" placeholder="Write something..." rows="3"></textarea><br>
+        <button type="submit">Save Mood</button>
+    </form>
+
+    <h2>Your Mood History</h2>
+    <div class="timeline">
+        {% for id, mood, note, time in entries %}
+            <div class="entry">
+                <span class="emoji">{{ mood }}</span>
+                <span class="time">{{ time }}</span>
+                <p>{{ note }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
